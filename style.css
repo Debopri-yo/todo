@@ -44,5 +44,31 @@
     padding: 5px; 
     cursor: pointer;
 }
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 30px; 
+    cursor: pointer; 
+    position: relative; 
+}
 
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding-right: px; */
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: rebeccapurple;
+}
+ul li.checked::before{
+    background-image: url('images/checked.png');
 }
